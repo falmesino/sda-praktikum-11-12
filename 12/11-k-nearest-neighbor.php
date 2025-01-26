@@ -60,7 +60,7 @@
   $k = 3;
 
   $knn = new KNN($data, $k);
-  $rekomendasi = $knn-predict($input);
+  $rekomendasi = $knn->predict($input);
 
   echo "Rekomendasi Produk:\n";
 
