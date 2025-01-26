@@ -26,4 +26,14 @@
     return array_merge($smaller, array($pivot), $greater);
   }
 
+  // Contoh
+  $arr = [38, 27, 43, 3, 9, 82, 10];
+  $sort = quickSort($arr);
+
+  echo "Original";
+  print_r($arr);
+
+  echo "Sorted";
+  print_r($sort);
+
 ?>

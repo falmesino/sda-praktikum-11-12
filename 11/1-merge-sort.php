@@ -24,8 +24,19 @@
       }
     }
     $result = array_merge($result, $left);
-    $reesult = array_merge($result, $right);
+    $result = array_merge($result, $right);
     return $result;
   }
+
+
+  // Contoh
+  $arr = [38, 27, 43, 3, 9, 82, 10];
+  $sort = mergeSort($arr);
+
+  echo "Original";
+  print_r($arr);
+
+  echo "Sorted";
+  print_r($sort);
 
 ?>

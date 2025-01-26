@@ -25,4 +25,11 @@
     return $arr;
   }
 
+  // Contoh Penggunaan
+  // Pengurutan data sensor suhu
+
+  $arr = array(25, 30, 20, 35, 40);
+  $sorted_arr = radixSort($arr);
+  print_r($sorted_arr);
+
 ?>

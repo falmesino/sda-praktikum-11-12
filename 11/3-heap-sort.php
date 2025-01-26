@@ -22,16 +22,16 @@
     return $arr;
   }
 
-  function heapify($arr, $n, $i) {
+  function heapify(&$arr, $n, $i) {
     $largest = $i;
     $left = 2 * $i + 1;
     $right = 2 * $i + 2;
 
-    if ($left < $n && $arr[$i] < $arr[$left]) {
+    if ($left < $n && $arr[$left] > $arr[$largest]) {
       $largest = $left;
     }
 
-    if ($right < $n && $arr[$largest] < $arr[$right]) {
+    if ($right < $n && $arr[$right] > $arr[$largest]) {
       $largest = $right;
     }
 
@@ -39,8 +39,19 @@
       $temp = $arr[$i];
       $arr[$i] = $arr[$largest];
       $arr[$largest] = $temp;
+      
       heapify($arr, $n, $largest);
     }
   }
+
+  // Contoh
+  $arr = [38, 27, 43, 3, 9, 82, 10];
+  $sort = heapSort($arr);
+
+  echo "Original";
+  print_r($arr);
+
+  echo "Sorted";
+  print_r($sort);
 
 ?>
