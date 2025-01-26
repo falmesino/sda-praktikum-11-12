@@ -23,7 +23,7 @@
   $dataset = [];
 
   foreach ($data as $pelanggan) {
-    $dataset[] = [$pelanggan['umut'], $pelanggan['penghasilan'], $pelanggan['label']];
+    $dataset[] = [$pelanggan['umur'], $pelanggan['penghasilan'], $pelanggan['label']];
   }
 
   // Pembagian data menjadi training dan testing
